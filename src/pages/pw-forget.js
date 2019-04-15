@@ -1,10 +1,10 @@
 import React from "react"
 import Layout from '../components/Layout'
 
-const IndexPage = () => (
+const PwForgetPage = () => (
   <Layout>
-    index
+    password forget
   </Layout>
 )
 
-export default IndexPage
+export default PwForgetPage

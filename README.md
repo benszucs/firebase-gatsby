@@ -5,7 +5,8 @@ Having created a number of gatsby blogs using headless CMS systems I feel like n
 ### Research
 This starter closely follows the following tutorial & starter projects, but I'm thinking of introducting cloud functions to the mix.
 - Tutorial: https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial/
-- Starter: https://github.com/the-road-to-react-with-firebase/react-gatsby-firebase-authentication?utm_campaign=Robin%20Wieruch%20-%20A%20Developer%27s%20Digest&utm_medium=email&utm_source=Revue%20newsletter
+- Starter: https://github.com/the-road-to-react-with-firebase/react-gatsby-firebase-authentication
 
 ### Notes
 1. Install & strip gatsby starter `gatsby new firebase-gatsby`
+2. Set up the folder structure: we will need: Landing page, Layout component, Navigation with links, Private page, Account Page, Admin Page, Sign-in, Sign-up & password forget pages.

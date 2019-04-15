@@ -1,10 +1,10 @@
 import React from "react"
 import Layout from '../components/Layout'
 
-const IndexPage = () => (
+const PrivatePage = () => (
   <Layout>
-    index
+    private
   </Layout>
 )
 
-export default IndexPage
+export default PrivatePage
