@@ -1,4 +1,6 @@
 import React, { Component } from "react"
+import { navigate } from "gatsby"
+import { withFirebase } from "../Firebase"
 
 const INITIAL_STATE = {
   email: "",
@@ -18,13 +20,25 @@ class SignInForm extends Component {
   }
 
   handleSubmit = event => {
-    event.preventDefault();
-    console.log(this.state);
+    event.preventDefault()
+
+    const { email, password } = this.state
+
+    this.props.firebase
+      .doSignInWithEmailAndPassword(email, password)
+      .then(() => {
+        this.setState({ ...INITIAL_STATE })
+        // navigate("/")
+      })
+      .catch(error => {
+        this.setState({ error })
+      })
   }
 
   render() {
     const { email, password, error } = this.state
     const isInvalid = password === "" || email === ""
+    console.log(this.props)
 
     return (
       <form onSubmit={this.handleSubmit}>
@@ -52,4 +66,4 @@ class SignInForm extends Component {
   }
 }
 
-export default SignInForm
+export default withFirebase(SignInForm)
